@@ -21,15 +21,7 @@ int main(void)
 	char ch = 'A';
 	int i,j,std_lines;
 	scanf("%c", &std_ch);
-	for (i=0;i<26; i++)
-	{
-		std_lines++;
-		ch++;
-		if (ch == std_ch)
-		{
-			break;
-		}
-	}
+	std_lines = std_ch - 'A';
 	for (i=0; i< std_lines+1; i++)
 	{
 		ch = 'A';
