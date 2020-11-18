@@ -8,8 +8,27 @@
 #include <stdio.h>
 
 int main(void)
-{
-	int a[8], b[8];
-
-	
+{   
+    int i;
+	double a[8], b[8];
+    for(i=0;i<8;i++)
+    {
+        scanf("%lf", &a[i]);
+        if (i>0)
+        {
+            b[i] = b[i-1]+a[i];
+        }else{
+            b[i] = a[i];
+        }
+    }
+    for(i=0;i<8;i++)
+    {
+        printf("%8.2f", a[i]);
+    }
+	printf("\n");
+    for(i=0;i<8;i++)
+    {
+        printf("%8.2f", b[i]);
+    }
+	printf("\n");
 }
